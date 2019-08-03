@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Button = ({ text, type, onClick }) => {
   return (
@@ -6,6 +7,16 @@ const Button = ({ text, type, onClick }) => {
       {text}
     </button>
   );
+};
+
+Button.propTypes = {
+    text: PropTypes.string,
+    type: PropTypes.string,
+    onClick: PropTypes.func.isRequired
+}
+
+Button.defaultProps = {
+    text: "Submit"
 };
 
 export default Button;

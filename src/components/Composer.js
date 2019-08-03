@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import Button from "./shared/Button"
 
 class Composer extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class Composer extends Component {
         <div>
           <textarea onKeyUp={this.onKeyUp} />
         </div>
-        <Button variant="primary" onClick={() => onSubmit(text)}>Send</Button>
+        <Button type="submit" onClick={() => onSubmit(evt.target)} text="POST" />
       </div>
     );
   }
