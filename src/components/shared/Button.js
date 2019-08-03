@@ -1,5 +1,11 @@
 import React from "react";
 
-const Button = ({ text, ...rest }) => <button {...rest} class="btn btn-secondary">{text}</button>;
+const Button = ({ text, type, onClick }) => {
+  return (
+    <button onClick={onClick} className={`btn btn-${type}`}>
+      {text}
+    </button>
+  );
+};
 
 export default Button;
